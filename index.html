@@ -1,24 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GlowTask - Modern To-Do App</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuickBite - Recipe Generator</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <div class="container">
-        <h1 class="title">GlowTask ✨</h1>
 
-        <div class="input-box">
-            <input type="text" id="taskInput" placeholder="Enter a task...">
-            <button onclick="addTask()">Add</button>
-        </div>
+  <div class="wrapper">
+    <h1 class="title">QuickBite 🍽️</h1>
+    <p class="subtitle">Stuck on what to cook? Let me decide for you!</p>
 
-        <ul id="taskList"></ul>
+    <div class="controls">
+      <div class="control-group">
+        <label for="mood">Cooking mood</label>
+        <select id="mood">
+          <option value="any">Any</option>
+          <option value="quick">Quick & Easy</option>
+          <option value="comfort">Comfort Food</option>
+          <option value="healthy">Healthy</option>
+        </select>
+      </div>
+
+      <div class="control-group">
+        <label for="diet">Diet type</label>
+        <select id="diet">
+          <option value="any">Any</option>
+          <option value="veg">Vegetarian</option>
+          <option value="nonveg">Non-Veg</option>
+        </select>
+      </div>
+
+      <button id="generateBtn">Generate Recipe</button>
     </div>
 
-    <script src="script.js"></script>
+    <div id="recipeCard" class="recipe-card hidden">
+      <h2 id="recipeTitle"></h2>
+      <p id="recipeMeta" class="recipe-meta"></p>
+
+      <h3>Ingredients</h3>
+      <ul id="ingredientsList"></ul>
+
+      <h3>Steps</h3>
+      <ol id="stepsList"></ol>
+
+      <button id="anotherBtn" class="secondary-btn">Give me another!</button>
+    </div>
+
+    <p class="footer">Made with ❤️ using HTML, CSS & JavaScript</p>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
+    
